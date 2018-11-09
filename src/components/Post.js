@@ -7,10 +7,11 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+const styles = {
     container: {
         display: 'flex',
-        flexWrap: 'wrap',
+        justifyContent: 'center',
+        textAlign: 'center',
     },
     formControl: {
         minWidth: 150,
@@ -20,7 +21,7 @@ const styles = theme => ({
     textField: {
         width: 700,
     },
-});
+};
 
 class Post extends React.Component {
     state = {
