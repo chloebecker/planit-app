@@ -6,22 +6,32 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import withStyles from "@material-ui/core/styles/withStyles";
+import {Link} from "react-router-dom";
 
-const NavBar = () => {
-    return(
-        <div>
-            <AppBar position="static">
-                <Toolbar>
-                    <IconButton color="inherit" aria-label="Menu">
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="title" color="inherit">
-                        Planit
-                    </Typography>
+const styles = {
+    title: {
+        margin: 10,
+    },
+};
 
-                </Toolbar>
-            </AppBar>
-        </div>
-    )
+class NavBar extends React.Component {
+
+    render() {
+        const { classes } = this.props;
+
+        return (
+            <div>
+                <AppBar position="static">
+                    <Toolbar>
+                        <Typography className={classes.title} variant="h2" color="inherit" gutterBottom>
+                            Planit
+                        </Typography>
+                    </Toolbar>
+                </AppBar>
+            </div>
+        )
+    }
 }
-export default NavBar;
+
+export default withStyles(styles)(NavBar);
