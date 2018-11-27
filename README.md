@@ -1,4 +1,4 @@
-## Read Me!
+## Welcome to Planit
 
 The PlanitApp is an event management application that allows users to post to various social media accounts. 
 
